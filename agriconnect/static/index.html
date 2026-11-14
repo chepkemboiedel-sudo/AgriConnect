@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AgriConnect AI — Customer Chat</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="app">
+    <div class="brand">AgriConnect AI <small>customer chat</small></div>
+    <span class="provider" id="provider">provider: …</span>
+    <div class="spacer"></div>
+    <label class="muted" style="color:#DDE8C8">Supplier:</label>
+    <select id="tenant"></select>
+    <a class="link" href="/inbox" target="_blank" rel="noopener">Staff inbox ↗</a>
+  </header>
+
+  <div class="wrap">
+    <div class="card" id="startCard">
+      <h2>Start a conversation</h2>
+      <div class="row">
+        <input class="text" id="name" placeholder="Your name (e.g. Jane)" value="Jane Farmer" />
+        <button class="btn" id="startBtn">Start chat</button>
+      </div>
+      <div class="hint">Try: <em>“What spacing do you recommend for hybrid maize?”</em> ·
+        <em>“How much is NPK 23:23:0 and is it in stock?”</em> ·
+        <em>“Can I get a refund on opened fertilizer?”</em> ·
+        <em>“I want to talk to a staff member.”</em></div>
+    </div>
+
+    <div class="card hidden" id="chatCard">
+      <div class="row" style="justify-content:space-between">
+        <h2 style="margin:0">Chat <span class="muted" id="who"></span></h2>
+        <span class="badge" id="statusBadge">assistant</span>
+      </div>
+      <div id="chat"></div>
+      <div id="banner"></div>
+      <div class="row" style="margin-top:10px">
+        <input class="text" id="input" placeholder="Type your message…" autocomplete="off" />
+        <button class="btn" id="sendBtn">Send</button>
+      </div>
+      <div class="hint">The assistant answers only from approved documents and the live catalog.
+        When it can’t, it hands you to a staff member — who sees this whole thread in the inbox.</div>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

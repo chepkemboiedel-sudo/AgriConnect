@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AgriConnect AI — Staff Inbox</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="app">
+    <div class="brand">AgriConnect AI <small>staff inbox</small></div>
+    <div class="spacer"></div>
+    <label class="muted" style="color:#DDE8C8">Supplier:</label>
+    <select id="tenant"></select>
+    <input id="staffName" placeholder="Your name" value="Sam (staff)" style="max-width:150px" />
+    <a class="link" href="/" target="_blank" rel="noopener">Customer chat ↗</a>
+  </header>
+
+  <div class="wrap" style="max-width:1100px">
+    <div class="inbox-grid">
+      <div>
+        <h2 style="color:#1E421F;margin:4px 0 12px">Needs attention</h2>
+        <div class="conv-list" id="list"><p class="muted">Loading…</p></div>
+      </div>
+      <div>
+        <div class="card" id="detail">
+          <p class="muted">Select a conversation on the left to see the full thread,
+            what the assistant found, and reply as staff.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/inbox.js"></script>
+</body>
+</html>
