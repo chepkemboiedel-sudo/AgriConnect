@@ -3,3 +3,5 @@ __pycache__/
 *.pyc
 agriconnect/data/agri.db
 .venv/
+# Office temporary / lock files (e.g. ~$deck.pptx)
+~$*
